@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Butter Feet Experience</title>
+    <title>Tycoon Experience</title>
     <style>
         body, html {
             margin: 0;
@@ -20,7 +20,8 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-image: url('butter_feet.png');
+            /* Using your new image filename */
+            background-image: url('Gemini_Generated_Image_8jl8vv8jl8vv8jl8 (1).png');
             background-size: cover;
             background-position: center;
             z-index: 1;
@@ -40,7 +41,8 @@
     <div id="bg-image"></div>
     <canvas id="particleCanvas"></canvas>
 
-    <audio id="calmAudio" src="calecale.mp3" loop></audio>
+    <!-- Using your new music filename -->
+    <audio id="calmAudio" src="Tyccoon_Game.mp3" loop></audio>
 
     <script>
         const canvas = document.getElementById('particleCanvas');
@@ -48,7 +50,9 @@
         const audio = document.getElementById('calmAudio');
         const particles = [];
         const particleImg = new Image();
-        particleImg.src = 'butter_feet.png';
+        
+        // Link to your updated image name
+        particleImg.src = 'Gemini_Generated_Image_8jl8vv8jl8vv8jl8 (1).png';
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -57,16 +61,16 @@
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 40 + 20;
-                this.speedX = Math.random() * 3 - 1.5;
-                this.speedY = Math.random() * 3 - 1.5;
+                this.size = Math.random() * 50 + 20;
+                this.speedX = Math.random() * 4 - 2;
+                this.speedY = Math.random() * 4 - 2;
                 this.rotation = Math.random() * 360;
             }
 
             update() {
                 this.x += this.speedX;
                 this.y += this.speedY;
-                this.rotation += 2;
+                this.rotation += 3;
 
                 if (this.x > canvas.width) this.x = 0;
                 if (this.x < 0) this.x = canvas.width;
@@ -84,7 +88,7 @@
         }
 
         function init() {
-            for (let i = 0; i < 25; i++) {
+            for (let i = 0; i < 30; i++) {
                 particles.push(new Particle());
             }
         }
@@ -99,7 +103,7 @@
         }
 
         function startCalm() {
-            audio.play();
+            audio.play().catch(e => console.log("Click again to play audio"));
             alert("you have been calmed!");
         }
 
