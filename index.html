@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUTTER FEET TYCOON RAHHHH!</title>
+    <title>OMCONITY BUTTER FEET RAHHHH!</title>
     
+    <!-- THE ICON -->
     <link rel="icon" type="image/png" href="Ori.png.png">
 
     <style>
@@ -22,21 +23,19 @@
             font-family: 'Arial Black', sans-serif;
         }
 
-        /* THE BACKGROUND IMAGE */
+        /* UPDATED BACKGROUND IMAGE: Omconity.png */
         #bg-image {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-image: url('Gemini_Generated_Image_8jl8vv8jl8vv8jl8 (1).png');
+            background-image: url('Omconity.png');
             background-size: cover;
             background-position: center;
             z-index: 1;
-            filter: contrast(1.2) brightness(1.1);
         }
 
-        /* THE PARTICLE LAYER */
         canvas {
             position: fixed;
             top: 0;
@@ -45,7 +44,6 @@
             pointer-events: none;
         }
 
-        /* OVERLAY TEXT FOR VIBES */
         #ra-text {
             position: fixed;
             bottom: 20px;
@@ -62,9 +60,10 @@
 <body onclick="startCalm()">
 
     <div id="bg-image"></div>
-    <div id="ra-text">RAHHHHHHHH!</div>
+    <div id="ra-text">OMCONITY RAHHHH!</div>
     <canvas id="particleCanvas"></canvas>
 
+    <!-- THE CASE-SENSITIVE MUSIC -->
     <audio id="calmAudio" src="Tyccoon_Game.mp3" loop></audio>
 
     <script>
@@ -74,8 +73,8 @@
         const particles = [];
         const particleImg = new Image();
         
-        // THE PARTICLE IMAGE
-        particleImg.src = 'Gemini_Generated_Image_8jl8vv8jl8vv8jl8 (1).png';
+        // UPDATED PARTICLE IMAGE: Omconity.png
+        particleImg.src = 'Omconity.png';
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -84,7 +83,7 @@
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 60 + 30; // BIGGER PARTICLES RAHHH
+                this.size = Math.random() * 60 + 30;
                 this.speedX = Math.random() * 6 - 3;
                 this.speedY = Math.random() * 6 - 3;
                 this.rotation = Math.random() * 360;
@@ -127,13 +126,11 @@
             requestAnimationFrame(animate);
         }
 
-        // INTERACTION FUNCTION
         function startCalm() {
-            audio.play().catch(e => console.log("RAHHH! Click again!"));
+            audio.play().catch(e => console.log("Click again!"));
             alert("you have been calmed!");
         }
 
-        // LOAD AND RUN
         particleImg.onload = () => {
             init();
             animate();
